@@ -13,11 +13,12 @@ $nama_user = htmlspecialchars($_POST['nama_user']);
 $username_user = htmlspecialchars($_POST['username_user']);
 $password_user = md5(htmlspecialchars($_POST['password_user']));
 $status_user = htmlspecialchars($_POST['status_user']);
+$email = htmlspecialchars($_POST['email']);
 $tempat = htmlspecialchars($_POST['tempat']);
 
 // masukkan ke database
 
-$query = "INSERT INTO user (id_user, nama_user, username_user, password_user, status_user, tempat) VALUES (NULL, '$nama_user', '$username_user', '$password_user', '$status_user','$tempat');";
+$query = "INSERT INTO user (id_user, nama_user, username_user, password_user, status_user,email, tempat) VALUES (NULL, '$nama_user', '$username_user', '$password_user', '$status_user','$email','$tempat');";
 
 $hasil = mysqli_query($db, $query);
 

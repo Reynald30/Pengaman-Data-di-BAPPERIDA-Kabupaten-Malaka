@@ -10,7 +10,7 @@ if(isset($_GET['id'])) {
     $file_id = intval($_GET['id']);
     
     // Query untuk mengambil detail file terdekripsi dari database
-    $query = "SELECT * FROM dekripsi WHERE id_de = $file_id";
+    $query = "SELECT * FROM ijin WHERE id_ijin = $file_id";
     $result = $db->query($query);
 
     // Periksa apakah query berhasil dijalankan

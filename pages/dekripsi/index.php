@@ -38,10 +38,7 @@ $result = $db->query($sql);
             echo "</button>";
             echo "<ul class='dropdown-menu pull-right' role='menu'>";
             echo "<li><a href='lihat.php?id=" . $row['id_de'] . "' class='btn btn-info btn-xs'><span class='glyphicon glyphicon-eye-open'></span> Detai</a></li>  <li class='divider'></li>"; // Tambahkan tombol lihat dengan mengarahkan ke file lihat.php
-          
-            if ($_SESSION['user']['status_user'] != 'Petugas') { 
-              echo "<li><a href='hapus.php?id=" . htmlspecialchars($row['id_de']) . "' class='btn btn-danger btn-xs' onclick='return confirm(\"Apakah Anda yakin ingin menghapus file ini?\")'><span class='glyphicon glyphicon-trash'></span> Hapus</a></li><li class='divider'></li>"; // Tambahkan tombol hapus dengan mengarahkan ke file hapus.php
-           }
+            echo "<li><a href='hapus.php?id=" . htmlspecialchars($row['id_de']) . "' class='btn btn-danger btn-xs' onclick='return confirm(\"Apakah Anda yakin ingin menghapus file ini?\")'><span class='glyphicon glyphicon-trash'></span> Hapus</a></li><li class='divider'></li>"; // Tambahkan tombol hapus dengan mengarahkan ke file hapus.php
             echo "<li><a href='download.php?id=" . $row['id_de'] . "' class='btn btn-primary btn-xs'><span class='glyphicon glyphicon-download'></span> Unduh</a></li>"; // Tambahkan tombol unduh dengan mengarahkan ke file download.php
             echo "</ul>";
             echo "</div>";

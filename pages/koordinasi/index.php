@@ -39,7 +39,7 @@ $result = $db->query($sql);
             echo "<span class='caret'></span>";
             echo "</button>";
             echo "<ul class='dropdown-menu pull-right' role='menu'>";
-            echo "<li><a href='download.php?id=" . $row['id_ko'] . "' class='btn btn-primary btn-xs'><span class='glyphicon glyphicon-download'></span> Unduh</a></li>"; // Tambahkan tombol unduh dengan mengarahkan ke file download.php
+            echo "<li><a href='download.php?id=" . $row['id_ko'] . "' class='btn btn-primary btn-xs'><span class='glyphicon glyphicon-download'></span> Unduh</a></li><li class='divider'></li>"; // Tambahkan tombol unduh dengan mengarahkan ke file download.php
             // Tambahkan tombol hapus dengan mengarahkan ke file hapus.php
             echo "<li><a href='hapus.php?id=" . $row['id_ko'] . "' class='btn btn-danger btn-xs' onclick='return confirm(\"Apakah Anda yakin ingin menghapus file ini?\")'><span class='glyphicon glyphicon-trash'></span> Hapus</a></li>";
             // Tambahkan tombol ubah dengan mengarahkan ke file ubah.php

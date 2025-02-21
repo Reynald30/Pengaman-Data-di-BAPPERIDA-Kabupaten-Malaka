@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav navbar-right">
         <p class="navbar-text">Hai, <?php echo $_SESSION['user']['nama_user'] ?></p>
         <li><a href="../dasbor"><i class="glyphicon glyphicon-home"></i> Dasbor</a></li>
-        <li><a href="../login/logout.php"><i class="glyphicon glyphicon-log-out"></i> Keluar</a></li>
+        <li><a href="../../login/logout.php"><i class="glyphicon glyphicon-log-out"></i> Keluar</a></li>
       </ul>
     </div>
   </div>

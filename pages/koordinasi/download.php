@@ -4,7 +4,7 @@ session_start();
 
 // Periksa apakah pengguna memiliki sesi aktif
 if (!isset($_SESSION['user'])) {
-    header("Location: ../login.php");
+    header("Location: ../../login/");
     exit;
 }
 
@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
     $stmt->close();
 
     // Tentukan path file untuk diunduh
-    $path = '../kades/koordinasi/uploads/' . $nama_file;
+    $path = '../../pages_user/koordinasi/uploads/' . $nama_file;
 
     // Unduh file
     if (file_exists($path)) {

@@ -4,7 +4,7 @@ session_start();
 
 // Periksa apakah pengguna memiliki sesi aktif
 if (!isset($_SESSION['user'])) {
-    header("Location: ../login.php");
+    header("Location: ../../login/");
     exit;
 }
 

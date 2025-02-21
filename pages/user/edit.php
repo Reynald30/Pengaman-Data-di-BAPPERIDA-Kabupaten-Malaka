@@ -1,12 +1,10 @@
 <?php include('../_partials/top.php') ?>
 
 <h1 class="page-header">Data User</h1>
-<?php include('_partials/menu.php') ?>
 
 <?php include('data-show.php') ?>
 
 <form action="update.php" method="post">
-<h3>A. Data Pribadi</h3>
 <table class="table table-striped table-middle">
   <tr>
     <th width="20%">Nama User</th>
@@ -34,9 +32,20 @@
       <select class="form-control selectpicker" name="status_user" required>
         <option value="<?php echo $data_user[0]['status_user'] ?>" selected><?php echo $data_user[0]['status_user'] ?></option>
         <option value="Admin">Admin</option>
-        <option value="Petugas">Petugas</option>
+        <option value="Pimpinan">Pimpinan</option>
+        <option value="User">User</option>
       </select>
     </td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="email" value="<?php echo $data_user[0]['email'] ?>" required></td>
+  </tr>
+  <tr>
+    <th>Tempat</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="tempat" value="<?php echo $data_user[0]['tempat'] ?>" required></td>
   </tr>
 </table>
 <input type="hidden" name="id_user" value="<?php echo $data_user[0]['id_user'] ?>">

@@ -11,7 +11,8 @@
     <tr>
       <th>No</th>
       <th>Nama</th>
-      <th>Username</th>
+      <th>Tempat</th>
+      <th>Email</th>
       <th>Status</th>
       <th>Aksi</th>
     </tr>
@@ -23,7 +24,8 @@
     <tr>
       <td><?php echo $no++; ?></td> <!-- Menampilkan nomor urut -->
       <td><?php echo $user['nama_user'] ?></td>
-      <td><?php echo $user['username_user'] ?></td>
+      <td><?php echo $user['tempat'] ?></td>
+      <td><?php echo $user['email'] ?></td>
       <td><?php echo $user['status_user'] ?></td>
       <td>
         <!-- Single button -->
@@ -32,24 +34,13 @@
           <span class="caret"></span>
           </button>
           <ul class="dropdown-menu pull-right" role="menu">
-            <li>
-              <a href="show.php?id_user=<?php echo htmlspecialchars($user['id_user']); ?>" class="text-info">
-                <i class="glyphicon glyphicon-sunglasses"></i> Detail
-              </a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="edit.php?id_user=<?php echo htmlspecialchars($user['id_user']); ?>" class="text-warning">
-                <span class="glyphicon glyphicon-edit"></span> Ubah
-              </a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="delete.php?id_user=<?php echo htmlspecialchars($user['id_user']); ?>" class="text-danger" onclick="return confirm('Yakin hapus data ini?')">
-                <i class="glyphicon glyphicon-trash"></i> Hapus
-              </a>
-            </li>
-          </ul>
+            <?php
+             echo "<li><a href='show.php?id_user=" . $user['id_user'] . "' class='btn btn-info btn-xs'><span class='glyphicon glyphicon-eye-open'></span> Detai</a></li>  <li class='divider'></li>"; // Tambahkan tombol lihat dengan mengarahkan ke file lihat.php
+             echo "<li><a href='edit.php?id_user=" . $user['id_user'] . "' class='btn btn-primary btn-xs'><span class='glyphicon glyphicon-download'></span> Ubah</a></li><li class='divider'></li>"; // Tambahkan tombol ubah
+            echo "<li><a href='delete.php?id_user=" . htmlspecialchars($user['id_user']) . "' class='btn btn-danger btn-xs' onclick='return confirm(\"Apakah Anda yakin ingin menghapus data ini?\")'><span class='glyphicon glyphicon-trash'></span> Hapus</a></li>"; // Tambahkan tombol hapus dengan mengarahkan ke file hapus.php
+             
+            ?>
+           </ul>
         </div>
       </td>
     </tr>

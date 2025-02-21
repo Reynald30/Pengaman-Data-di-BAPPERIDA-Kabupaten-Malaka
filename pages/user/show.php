@@ -23,6 +23,11 @@
     <td><?php echo $data_user[0]['status_user'] ?></td>
   </tr>
   <tr>
+    <th>Email</th>
+    <td>:</td>
+    <td><?php echo $data_user[0]['email'] ?></td>
+  </tr>
+  <tr>
     <th>Tempat</th>
     <td>:</td>
     <td><?php echo $data_user[0]['tempat'] ?></td>

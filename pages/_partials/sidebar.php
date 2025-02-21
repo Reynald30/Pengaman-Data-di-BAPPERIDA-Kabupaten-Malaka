@@ -57,7 +57,7 @@ function is_active($page) {
   </li>
 </ul>
 
-<?php if ($_SESSION['user']['status_user'] != 'Petugas'): ?>
+<?php if ($_SESSION['user']['status_user'] != 'User'): ?>
 <ul class="nav nav-sidebar">
   <li class="<?php echo is_active('user'); ?>">
     <a href="../user" class="<?php echo is_active('user'); ?>"><i class="glyphicon glyphicon-user"></i> User</a>

@@ -29,9 +29,14 @@
         <option value="" selected disabled>- pilih -</option>
         <option value="Admin">Admin</option>
         <option value="Pimpinan">Pimpinan</option>        
-        <option value="Kades">Kades</option>
+        <option value="User">User</option>
       </select>
     </td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td>:</td>
+    <td><input type="text" class="form-control" name="email" required></td>
   </tr>
   <tr>
     <th>Tempat</th>
